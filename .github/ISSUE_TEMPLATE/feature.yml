@@ -1,44 +1,44 @@
 name: Feature
-description: Nouvelle fonctionnalite
+description: New Feature
 title: "[Feature]: "
-labels: ["FEAT"]
+labels: ["Feature"]
 body:
   - type: dropdown
     id: priority
     attributes:
-      label: Priorité
-      description: Importance
+      label: Priority
+      description: Importance of this feature
       options:
-        - P0 - Obligatoire
-        - P1 - Important
-        - P2 - Optionnel
-        - P3 - Faible priorité
+        - P0 - HIGHEST
+        - P1 – HIGH
+        - P2 – MEDIUM
+        - P3 – LOW
     validations:
       required: true
   - type: textarea
     id: summary
     attributes:
-      label: Demande
-      description: Decris simplement la fonctionnalite souhaitee.
+      label: Request
+      description: Simply describe the desired functionality.
     validations:
       required: true
   - type: textarea
     id: value
     attributes:
-      label: Pourquoi
-      description: Quel probleme ca resout ou quel benefice ?
+      label: Why
+      description: What problem does it solve or what benefit does it provide?
   - type: textarea
     id: links
     attributes:
       label: Liens / exemples
-      description: Lien, capture, exemple si besoin.
+      description: Links, screenshots, exemple if needed.
   - type: checkboxes
     id: confirmation
     attributes:
-      label: Vérifications
-      description: Merci de confirmer
+      label: Verifications
+      description: Please confirm the following checks
       options:
-        - label: Cette feature n'existe pas déjà dans les tickets ou dans l’application
+        - label: This feature does not already exist in tickets or in the application
           required: true
-        - label: Cette demande est alignée avec la roadmap
+        - label: This request is aligned with the roadmap
           required: true

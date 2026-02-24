@@ -1,53 +1,53 @@
-name: Demande générale
-description: Ticket générique pour besoin produit/tech/doc
-title: "[Demande]: "
-labels: ["A EVALUER"]
+name: Task
+description: This is a simple task
+title: "[Task]: "
+labels: ["Task"]
 body:
   - type: dropdown
     id: priority
     attributes:
-      label: Priorité
-      description: Importance
+      label: Priority
+      description: Importance of this task
       options:
-        - P0 - Obligatoire
-        - P1 - Important
-        - P2 - Optionnel
-        - P3 - Faible priorité
+        - P0 - HIGHEST
+        - P1 – HIGH
+        - P2 – MEDIUM
+        - P3 – LOW
     validations:
       required: true
   - type: markdown
     attributes:
       value: |
-        Merci de détailler la demande.
+        Please provide details of your request.
   - type: textarea
     id: description
     attributes:
       label: Description
-      description: Décris la demande et le résultat attendu.
-      placeholder: "En tant que [persona], je veux [besoin] afin de [bénéfice]."
+      description: Please describe your request.
+      placeholder: "As [persona], I want [need] for [benefits]."
     validations:
       required: true
   - type: textarea
     id: checklist
     attributes:
       label: Checklist
-      description: Découpe en tâches concrètes si possible.
+      description: Break it down into specific tasks if possible.
       value: |
         - [ ] ...
         - [ ] ...
   - type: textarea
     id: references
     attributes:
-      label: Références
-      description: Liens vers specs, maquettes, discussions, tickets liés.
-      placeholder:  lien vers doc / code ou screenshot
+      label: References
+      description: Links for specs, models, docs, discussions, tickets liés, ...
+      placeholder: Refs
   - type: checkboxes
     id: confirmation
     attributes:
-      label: Vérifications
-      description: Merci de confirmer
+      label: Verifications
+      description: Please confirm the following checks
       options:
-        - label: Cette feature n'existe pas déjà dans les tickets ou dans l’application
+        - label: This task does not already exist in tickets or in the application
           required: true
-        - label: Cette demande est alignée avec la roadmap
+        - label: This request is aligned with the roadmap
           required: true
